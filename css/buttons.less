@@ -1,0 +1,174 @@
+.btn,
+a.btn,
+input[type="submit"] {
+  border-radius: 2px;
+  box-shadow: none;
+  text-align: left;
+  padding: 15px 30px;
+  min-width: 40px;
+  max-width: 375px;
+  display: inline-block;
+  text-shadow: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Roboto';
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.acf-button {
+  .btn();
+}
+
+.btn-white {
+  background: @white;
+  color: @black;
+  border: none;
+  text-transform: capitalize;
+
+  &:hover {
+    background: @grey;
+    color: @black;
+  }
+}
+
+.btn-sm {
+  background: none;
+  padding: 0px !important;
+  margin: 0px;
+  font-size: 14px;
+  color: @blue;
+  text-decoration: underline;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: @blue;
+  border: solid 2px @blue;
+  text-transform: capitalize;
+
+  &:hover {
+    background: @blue;
+    color: @white;
+  }
+}
+
+.btn-blu, .button-primary {
+  background: @blue;
+  color: @white;
+  border: none;
+  text-transform: capitalize;
+
+  &:hover {
+    background: @ltblue;
+    color: @white !important;
+  }
+}
+
+@media(max-width: @screen-xs) {
+  .btn-blu {
+    width: 100%;
+    text-align: center !important;
+  }
+}
+
+div.prev-posts-link a {
+  
+  float:right;
+}
+
+div.prev-posts-link a::after {
+  content: " >\0000a0";
+}
+
+/* gravity forms buttons override */
+input.gform_button {
+  .btn-blu();
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input.gform_next_button {
+  .btn-blu();
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+
+
+.btn-filter {
+  background: @white;
+  border: solid 1px @ltgrey;
+  width: 100%;
+  color: @blue;
+  outline: none;
+
+  &:focus {
+    background: @ltgrey;
+    color: @blue;
+    outline: none;
+  }
+}
+
+
+
+.button.gform_next_button {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: bold;
+}
+
+@media(max-width: @screen-xs) {
+  .btn-cta {
+    margin-top: 25px;
+  }
+}
+  
+
+
+
+
+
+
+
+div.updated {
+  background: @ltgreen;
+  border-radius: 5px;
+  border: solid 1px @green;
+  padding: 10px;
+}
+
+
+
+
+.btn-default {
+  border: none;
+  font-size: 16px;
+  height: 91px;
+  outline: none;
+
+  &:hover {
+    background: @white;
+    color: @blue;
+  }
+
+  &:focus {
+    background-color: @white !important;
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

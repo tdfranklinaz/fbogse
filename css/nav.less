@@ -1,0 +1,379 @@
+.site-header {
+  padding-right: 0;
+  background: transparent;
+
+  .brand .white {
+    display: none !important;
+  }
+}
+
+
+a.brand img {
+  padding-right: 0px;
+  max-width: 150px;
+}
+
+.row-top-header {
+  padding: 10px 0px 10px 0px;
+}
+
+.navbar {
+  background: @white;
+  border-radius: 0px;
+}
+
+.trans-bg {
+  background: transparent;
+}
+
+.navbar-header h1 {
+  line-height: 75px;
+}
+
+.menu-header {
+  line-height: 74px;
+}
+
+.menu-header-dashboard {
+  line-height: 90px;
+}
+
+// Mobile First
+.navbar {
+  margin-bottom: 0;
+  min-height: 75px;
+  border: 0px;
+}
+.brand {
+  display: block;
+
+  img {
+    //width: 50px;
+  }
+}
+.btn-menu {
+  margin-top: 12px;
+  padding-right: 12px;
+  width: 75px;
+  display: inline-block;
+  position: relative;
+  z-index: 101;
+  text-align: right;
+  outline: 0;
+  background: transparent;
+
+  span.text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    vertical-align: middle;
+    display: inline-block;
+    top: 0;
+    margin: -22px 0 0;
+    padding: 0;
+    color: @black;
+    transition: opacity .3s ease-in-out;
+  }
+  span.lines-circle {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 40px;
+    background: none;
+    color: @black;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 7px 13px;
+    margin-left: 8px;
+
+    span.line-1,
+    span.line-2,
+    span.line-3 {
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 26px;
+      background: @black;
+      transform: rotate(-90deg);
+      top: 0px;
+      left: 50%;
+      margin-left: -2px;
+      margin-top: 1px;
+      transition: transform .3s ease-in-out, opacity .3s ease;
+    }
+    span.line-2 {
+      transform: rotate(90deg);
+      margin-top: 8px;
+    }
+    span.line-3 {
+      transform: rotate(90deg);
+      margin-top: 15px;
+      opacity: 1;
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    outline: 0;
+  }
+}
+.nav-collapse {
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: @white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  text-align: left;
+  transition: opacity .3s ease-in-out, visibility 0s .3s ease;
+
+  .nav-top {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: visible;
+    max-height: 100%;
+
+    ul.nav {
+      margin-bottom: 100px;
+      padding-top: 30px;
+
+      li {
+        position: relative;
+        display: block;
+
+        a {
+          position: relative;
+          display: block;
+          color: @white;
+          font-size: 25px;
+          font-weight: normal;
+          border-bottom: solid 1px @ltgrey;
+          text-align: left;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          
+
+
+          &:hover,
+          &:focus {
+            background: none;
+            color: @orange;
+          }
+        }
+      }
+
+      li:last-child a {
+        .btn();
+        padding-right: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+        text-align: center;
+        color: @blue !important;
+        background: transparent;
+        border: solid 2px @blue;
+        padding-left: 20px;
+        font-size: 16px;
+        text-transform: capitalize;
+
+        &:hover {
+          background: @blue;
+          color: @white !important;
+        }
+      }
+
+      ul.sub-menu {
+        padding: 0;
+        margin-top: 15px;
+      }
+    }
+
+    ul#navigation-top-front {
+      li a {
+        color: @white !important;
+      }
+    }
+    @media(max-width: @screen-xs) {
+      ul#navigation-top-front {
+        li a {
+          color: @black !important;
+        }
+        li:last-child a {
+          color: @white !important;
+        }
+      }
+    }
+    ul#navigation-top {
+      li a {
+        color: @black;
+      }
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 768px) {
+  .site-header {
+    min-height: 90px;
+  }
+  .brand {
+
+    color: @black;  
+    font-weight: bold;
+
+
+
+    img {
+      width: 100%;
+      margin-top: 20px;
+      //margin-top: 5px;
+      //margin-left: 15px;
+    }
+
+    .dashboard-logo {
+      margin-top: 30px;
+    }
+
+  }
+  .btn-menu {
+    margin-top: 12px;
+    padding-right: 20px;
+
+    span.text {
+      font-size: 24px;
+    }
+  }
+  .nav-open {
+    display: none;
+  }
+  .nav-collapse {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    background: transparent;
+
+    visibility: visible;
+    opacity: 1;
+
+    .nav-top {
+      padding: 0;
+      overflow: visible;
+
+      ul.nav {
+        text-align: right;
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+
+          a {
+            font-size: 16px;
+            color: @white;
+            line-height: 54px;
+            border: 0px;
+
+            &:hover {
+              color: @orange;
+              font-weight: bold;
+              
+            }
+
+          }
+        }
+
+        li:last-child a {
+          margin-top: 0px;
+        }
+      }
+
+      ul.nav-front-white {
+        li a {
+          color: @white;
+          &:hover {
+            color: @white;
+          }
+        }
+      }
+    }
+  }
+}
+// Nav open!
+.nav-visible {
+  // transition the menu button
+  .btn-menu {
+    span.text {
+      opacity: 0;
+    }
+    span.lines-circle {
+      transform: rotate(0deg);
+
+
+      span.line-1 {
+        transform: rotate(-45deg);
+        top: 5px;
+        left: 50%;
+        margin-left: -2px;
+        margin-top: 1px;
+      }
+      span.line-2,
+      span.line-3 {
+        transform: rotate(45deg);
+        top: 5px;
+        left: 50%;
+        margin-left: -2px;
+        margin-top: 1px;
+      }
+      span.line-3 {
+        opacity: 0;
+      }
+    }
+  }
+  // show the nav
+  .nav-collapse {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+  }
+}
+
+
+/* responsive */
+@media(max-width: @screen-sm) {
+  .row-top-header {
+    padding: 0px 25px;
+  }
+  .site-header {
+    background: @white;
+  }
+  .absolute {
+    position: fixed;
+    height: 75px;
+  }
+  a.brand img {
+    margin-top: 23px;
+  }
+  .btn-menu {
+    margin-top: 5px;
+  }
+}
+
+
+
+
+
+
+
+

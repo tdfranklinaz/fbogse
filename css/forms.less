@@ -1,0 +1,151 @@
+
+
+form input {
+	height: 45px;
+}
+
+
+/* sign up form */
+input[name="log"],
+input[name="pwd"] {
+	width:100%;
+	height: 40px;
+	padding: 5px 15px;
+	outline: none;
+	border: solid 1px;
+	border-radius: 3px;
+	border-color: #c9c9c9;
+
+	border-color: #ececec;
+  height: 45px;
+  border-radius: 3px;
+  border-width: 1px;
+  padding: 0px 15px !important;
+  background: #fcfcfc;
+}
+
+p.login-username,
+p.login-password,
+p.login-remember {
+	text-align: left;
+}
+
+p.login-password,
+p.login-remember,
+p.login-submit {
+	margin-top: 25px;
+}
+
+input[name="wp-submit"] {
+	background: @blue;
+	width: 100%;
+	color: @white;
+	outline: none;
+	border: none;
+	text-align: center;
+	border-radius: 3px;
+
+	&:hover {
+		background: @ltblue;
+	}
+}
+
+
+/* remember me button */
+input[name="rememberme"] {
+	height: 15px;
+}
+
+
+
+
+
+/* gravity forms */
+
+/* all basic input fields */
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper textarea {
+	width:100%;
+	height: 40px;
+	padding: 5px 15px;
+	outline: none;
+	border: solid 1px;
+	border-radius: 3px;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+
+.gform_wrapper input:focus,
+.gform_wrapper textarea:focus {
+	background: @white;
+	border: solid 1px @ltblue;
+}
+
+.gform_wrapper select {
+	width:100%;
+	height: 40px;
+	padding: 5px 15px;
+	outline: none;
+	border: solid 1px;
+	border-radius: 3px;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+	background: @white;
+}
+
+/* labels */
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label {
+	color: @black;
+}
+
+.gform_wrapper ul.gform_fields li.gfield {
+	margin-top: 24px !important;
+	margin-bottom: 24px !important;
+}
+
+/* inline validation error */
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background: @ltred !important;
+	border: none !important;
+	padding: 15px 25px !important;
+	border-radius: 5px;
+
+
+}
+
+/* top validation error */
+div.validation_error {
+  background: @ltred;
+  padding: 15px 25px !important;
+  text-align: left !important;
+  color: @red !important;
+  border-radius: 5px;
+  font-weight: normal !important;
+  border: 0px !important;
+  font-size: 16px !important;
+}
+
+
+
+
+
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*="gfield_time_"].ginput_container label {
+	display: none !important;
+}
+
+
+.gform_wrapper .top_label .gfield_label {
+	font-size: 12px !important;
+	color: @black !important;
+}
+
+
+
+
+/* upload images box */
+.gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+	padding: 75px 0px !important;
+}
+
+/* gform wrapper */
+.gform_wrapper {
+	padding: 0px 25px;
+}
