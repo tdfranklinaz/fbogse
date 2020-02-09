@@ -201,7 +201,11 @@ get_header(); ?>
                 <h3>Contact Seller</h3>
 
                 <div class="contact-seller-form">
-                  <?php echo do_shortcode('[gravityform id="6" title="false" description="false" ajax="true" tabindex="49" field_values="listing_owner_email=<?php echo get_the_author_meta('user_email'); ?>"]'); ?>
+                  <?php 
+                    $post_author_email = get_the_author_meta('user_email');
+                    //echo $post_author_email;
+                    echo do_shortcode('[gravityform id="6" title="false" description="false" ajax="true" tabindex="49" field_values="listingowner=' . $post_author_email . '"]');
+                  ?>
                 </div>
                 
 
@@ -211,12 +215,7 @@ get_header(); ?>
                 <?php // Get post author email ?>
                 <p><a href="tel:<?php echo get_the_author_meta('bizPhone'); ?>" ><?php echo get_the_author_meta('bizPhone'); ?></a></p>
                 <p><a href="mailto:<?php echo get_the_author_meta('user_email'); ?>"><?php echo get_the_author_meta('user_email'); ?></a></p>
-
-                <br>
-                <a href="mailto:<?php echo get_the_author_meta('user_email'); ?>" class="btn btn-blu">Email Seller</a>
               </div>
-
-              <br>
 
               <!-- BUSINESS INFO -->
               <div class="well">
