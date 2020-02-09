@@ -74,11 +74,7 @@ get_header(); ?>
           </div>
 
 
-          <div class="row pt1">
-            <div class="col-xs-12"> 
-              <h1><?php the_title(); ?></h1>
-            </div>
-          </div>
+          <!-- END BREADCRUMBS MENU -->
 
 
           <div class="row pt1">
@@ -141,6 +137,54 @@ get_header(); ?>
               </div>
 
 
+              <div class="row pt">
+                <div class="col-xs-12">
+                  <h1><?php the_title(); ?></h1>
+                </div>
+              </div>
+
+              <hr style="border-color:#ccc;">
+              <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                  <p class="single-price">
+                    <?php echo get_field('equipment_price'); ?>
+                    <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
+                      <a href="#editModalPrice" data-toggle="modal" class="btn btn-sm">Edit</a>
+                    <?php endif; ?>
+                  </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+
+                  <p>
+                    <?php echo $equipment_city; ?>, <?php echo $equipment_state; ?>
+                    <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
+                      <a href="#editModalLocation" data-toggle="modal" class="btn btn-sm">Edit</a>
+                    <?php endif; ?>
+                  </p>
+                  
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <p>
+                    <?php echo get_field('equipment_condition'); ?>
+                    <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
+                      <a href="#editModalCondition" data-toggle="modal" class="btn btn-sm">Edit</a>
+                    <?php endif; ?>
+                  </p>
+                </div>
+              </div>
+              <hr style="border-color:#ccc;">
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="single-product-desc"><?php echo $desc; ?>
+                    <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
+                      <a href="#editModalDesc" data-toggle="modal" class="btn btn-sm">Edit</a>
+                    <?php endif; ?>
+                  </p>
+                </div>
+              </div>
+
+
             </div>
 
 
@@ -153,40 +197,13 @@ get_header(); ?>
             <div class="col-sm-5">
 
               <div class="well">
-                <!-- PRICE -->
-                <p class="single-price">
-                  <?php echo get_field('equipment_price'); ?>
-                  <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
-                    <a href="#editModalPrice" data-toggle="modal" class="btn btn-sm">Edit</a>
-                  <?php endif; ?>
-                </p>
-                <hr style="border-color:#f3f3f3;">
 
-                <!-- LOCATION -->
-                <p>
-                  <?php echo $equipment_city; ?>, <?php echo $equipment_state; ?>
-                  <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
-                    <a href="#editModalLocation" data-toggle="modal" class="btn btn-sm">Edit</a>
-                  <?php endif; ?>
-                </p>
-                <hr style="border-color:#f3f3f3;">
+                <h3>Contact Seller</h3>
 
-                <!-- CONDITION -->
-                <p>
-                  <?php echo get_field('equipment_condition'); ?>
-                  <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
-                    <a href="#editModalCondition" data-toggle="modal" class="btn btn-sm">Edit</a>
-                  <?php endif; ?>
-                </p>
-                <hr style="border-color:#f3f3f3;">
+                <?php echo do_shortcode('[gravityform id="6" title="false" description="false" ajax="true" tabindex="49"]'); ?>
 
-                <!-- DESCRIPTION -->
-                <p class="single-product-desc"><?php echo $desc; ?>
-                  <?php	if( is_user_logged_in() && $current_user->ID == $post->post_author): ?>
-                    <a href="#editModalDesc" data-toggle="modal" class="btn btn-sm">Edit</a>
-                  <?php endif; ?>
-                </p>
-                <hr style="border-color:#f3f3f3;">
+
+                <hr style="border-color: #f7f7f7;">
 
                 <?php // Get post author email ?>
                 <p><a href="tel:<?php echo get_the_author_meta('bizPhone'); ?>" ><?php echo get_the_author_meta('bizPhone'); ?></a></p>
@@ -414,11 +431,11 @@ get_header(); ?>
           </div>
           </section>
 
-          <section class="bg-ltgrey medium">
+          <section class="bg-white medium">
             <div class="container">
 
 
-          <div class="row pt2">
+          <div class="row">
             <div class="col-xs-12 text-center">
               <h2 class="section-title">Recent Listings</h2>
             </div>
