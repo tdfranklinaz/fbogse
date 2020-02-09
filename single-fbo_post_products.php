@@ -200,7 +200,10 @@ get_header(); ?>
 
                 <h3>Contact Seller</h3>
 
-                <?php echo do_shortcode('[gravityform id="6" title="false" description="false" ajax="true" tabindex="49"]'); ?>
+                <div class="contact-seller-form">
+                  <?php echo do_shortcode('[gravityform id="6" title="false" description="false" ajax="true" tabindex="49" field_values="listing_owner_email=<?php echo get_the_author_meta('user_email'); ?>"]'); ?>
+                </div>
+                
 
 
                 <hr style="border-color: #f7f7f7;">
