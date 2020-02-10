@@ -10,17 +10,31 @@ get_header(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<section class="bg-ltgrey small">
+  <?php $post_id = 2; $featured_home = get_the_post_thumbnail_url( $post_id, 'huge' ); ?>
+
+  <!-- Hero Section -->
+  <section class="bg-hero padding-large" style="background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?php echo $featured_home; ?>'); background-size: cover; background-position: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+          <h1 class="hero">Browse Ground Support Equipment</h1><br>
+
+          <!-- Search form -->
+          <?php get_search_form(); ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+
+  <!-- Categories -->
+
+
+	<section class="bg-ltgrey padding-medium">
 		<div class="container">
 
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 style="font-size:28px;">Browse Ground Support Equipment</h1>
-        </div>
-        
-      </div>
-
-			<div class="row pt2" style="overflow: hidden;">
+			<div class="row" style="overflow: hidden;">
 				<div class="col-sm-3">
 
           <div class="row hidden-xs">

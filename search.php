@@ -9,26 +9,31 @@
 get_header(); ?>
 <?php if ( have_posts() ) : ?>
 
+	<?php $post_id = 2; $featured_home = get_the_post_thumbnail_url( $post_id, 'huge' ); ?>
+
+<!-- Hero Section -->
+<section class="bg-hero padding-large" style="background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?php echo $featured_home; ?>'); background-size: cover; background-position: center;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+				<h1 class="hero">Search results for: <?php echo get_search_query(); ?></h1><br>
+
+				<!-- Search form -->
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="bg-ltgrey medium">
 	<div class="container">
 
 		<div class="row">
-			<div class="col-sm-6">
-				<h3>Search results for: <?php echo get_search_query(); ?></h3>
-			</div>
-			<div class="col-sm-6">
-				<a href="<?php if(is_user_logged_in()): ?>/create-listing<?php else: ?>/register<?php endif; ?>" class="btn btn-blu pull-right hidden-xs">New listing &plus;</a>
-			</div>
-			
-		</div>
 
-		<div class="row pt1">
-
-			<div class="col-sm-3">
+			<!-- <div class="col-sm-3">
 
 				<div class="row hidden-xs">
 					<div class="col-xs-12">
-						<h4 class="archive-title">Filter</h4>
 						<?php include('template-parts/content-filter.php'); ?>
 					</div>
 				</div>
@@ -57,9 +62,9 @@ get_header(); ?>
 					</div>
 				</div>
 
-			</div>
+			</div> -->
 			
-			<div class="col-sm-9">
+			<div class="col-sm-8 col-sm-offset-2">
 
 				
 
