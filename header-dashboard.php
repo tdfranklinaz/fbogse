@@ -17,6 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
 <!-- Critical CSS -->
 <style type="text/css">
   /* override default responsive menu for dashboard */
