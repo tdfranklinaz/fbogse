@@ -64,7 +64,7 @@
         <div class="row pt">
           
           <div class="col-xs-12">
-            <p>Copyright &copy; 2019 FBOGSE LLC</p>
+            <p>Copyright &copy; <?php echo date("Y"); ?> FBOGSE LLC</p>
           </div>
         </div>
           

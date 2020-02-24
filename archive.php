@@ -13,7 +13,7 @@ get_header(); ?>
   <?php $post_id = 2; $featured_home = get_the_post_thumbnail_url( $post_id, 'huge' ); ?>
 
   <!-- Hero Section -->
-  <section class="bg-hero padding-large" style="background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?php echo $featured_home; ?>'); background-size: cover; background-position: center;">
+  <section class="bg-hero padding-large" style="background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://www.fbogse.com/wp-content/uploads/2020/02/people-walking-towards-white-plane-14944491-1-scaled.jpg'); background-size: cover; background-position: center;">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
